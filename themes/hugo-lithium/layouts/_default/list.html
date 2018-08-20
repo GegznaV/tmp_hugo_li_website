@@ -1,5 +1,26 @@
 {{ partial "header.html" . }}
 
+<!-- BEGIN (for debugging) -->
+
+{{ .Site.BaseURL }} <br>
+{{ .Site.BaseURL | absLangURL }} <br>
+{{ .Site.BaseURL | absURL }} <br>
+{{ .Site.BaseURL | relLangURL }} <br>
+{{ .Site.BaseURL | relURL }} <br>
+
+{{ .Permalink }} <br>
+{{ .Permalink | absLangURL }} <br>
+{{ .Permalink | absURL }} <br>
+{{ .Permalink | relLangURL }} <br>
+{{ .Permalink | relURL }} <br>
+
+{{ .Site.Home.RelPermalink }} <br>
+{{ .Site.Home.Permalink }} <br>
+
+{{ "mystyle.css" | absURL }} <br>
+{{ "mystyle.css" | relURL }} <br>
+
+<!-- END (for debugging) -->
 <main class="content" role="main">
 
   {{ if and .IsHome .Content }}
